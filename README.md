@@ -1,7 +1,7 @@
 Svetovni miljarderji
 ===
 
-Pri projektni nalogi bom analizirala svetovne miljarderje po Forbsu, podatke bom jemala na strani : https://www.forbes.com/billionaires/list/50/#version:static
+Pri projektni nalogi bom analizirala svetovne miljarderje po Forbsu, podatke bom vzela na strani : https://www.forbes.com/billionaires/list/50/#version:static
 
 O vsaki osebi bom zejela :
 * osebe
