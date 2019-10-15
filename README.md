@@ -1,7 +1,7 @@
 Youtuberji
 ===
 
-Pri projektni nalogi bom analizirala najpoularnejše YouTube kanale, podatke bom vzela na strani :
+Pri projektni nalogi bom analizirala prvih 5000 najpopularnejših YouTube kanalov, podatke bom vzela na strani :
 https://socialblade.com/youtube/top/5000
 
 O vsakem kanalu bom zejela :
@@ -11,5 +11,6 @@ O vsakem kanalu bom zejela :
 * število objav
 * število ogledov
 * število vpisanih
+* kategorija 
 	
-Delovne hipoteze : Ali so popularnejši tisti youtube kanali, ki imajo večobjav? Razmerje med število vpisanih in ogledi? Koliko vpisanih pogleda večino objav?
+Delovne hipoteze : Ali so popularnejši tisti youtube kanali, ki imajo več objav? Razmerje med število vpisanih in ogledi? Katere kategorije so najbolj priljubljene?
