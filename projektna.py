@@ -25,7 +25,7 @@ vzorec_podatkov = re.compile(
     flags = re.DOTALL)
  
 
-orodja.shrani_spletno_stran(url, 'zajeti_podatki')
+orodja.shrani_spletno_stran(url,'zajeti_podatki')
 vsebina = orodja.vsebina_datoteke('podatki')
 polja = ["mesto", "ocena", "ime", "kategorija", "objave", "vpisani","ogledi" ]
 

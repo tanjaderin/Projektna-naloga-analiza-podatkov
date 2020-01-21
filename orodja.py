@@ -21,7 +21,10 @@ def shrani_spletno_stran(url, ime_datoteke, vsili_prenos=False):
         if os.path.isfile(ime_datoteke) and not vsili_prenos:
             print('shranjeno že od prej!')
             return
-        r = requests.get(url)
+        s = requests.Session()
+        r = s.get(url, 
+        headers= {"User-Agent": 
+        "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0"})
     except requests.exceptions.ConnectionError:
         print('stran ne obstaja!')
     else:
