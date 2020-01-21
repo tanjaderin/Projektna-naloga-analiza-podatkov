@@ -5,18 +5,9 @@ import sys
 import requests
 import orodja
 
-mapa_strani = r'C:\Users\tanja\Documents\pr1\Projektna-naloga-analiza-podatkov'
+
 stran = 'spletna_stran.html'
-
-
-#podatki = seznam_podatkov(mapa_strani, stran)
-#zapisi_csv(podatki, polja, 'youtuberji_sez.csv')
-
-
-
-#with open('youtuberji.htm') as datoteka:
-#    vsebina = datoteka.read()
-
+url ='https://socialblade.com/youtube/top/5000/mostsubscribed'
 
 
 vzorec_bloka = re.compile(
@@ -34,9 +25,8 @@ vzorec_podatkov = re.compile(
     flags = re.DOTALL)
  
 
-url = ('https://socialblade.com/youtube/top/5000/mostsubscribed')
 orodja.shrani_spletno_stran(url, 'zajeti_podatki')
-vsebina = orodja.vsebina_datoteke('zajeti_podatki')
+vsebina = orodja.vsebina_datoteke('podatki')
 polja = ["mesto", "ocena", "ime", "kategorija", "objave", "vpisani","ogledi" ]
 
 bloki = [] 
@@ -46,14 +36,12 @@ for ujemanje in re.findall(vzorec_bloka, vsebina):
     bloki.append(ujemanje)
     stevec += 1
 
-slovar = []
-prau = 0
+seznam_slovarjev = []
+najdeni = 0
+
 for ujemanje in re.finditer(vzorec_podatkov, vsebina):
-    prau +=1
-    slovar.append(ujemanje.groupdict())
-#.replace(",", "")
-#for i in ["st", "nd", "th", "rd"]:
-        #slovar["mesto"] = slovar["mesto"].replace(i, "")
+    najdeni +=1
+    seznam_slovarjev.append(ujemanje.groupdict())
 
 def pocisti_podatke(seznam):
     for slovar in seznam:
@@ -69,11 +57,11 @@ def pocisti_podatke(seznam):
     return seznam
 
 
-print(prau)
+print(najdeni)
 print(stevec)
 
 #orodja.zapisi_json(bloki, 'obdelani-podatki/bloki.json')
-orodja.zapisi_csv(pocisti_podatke(slovar), polja, 'obdelani-podatki/podatki.csv')
+orodja.zapisi_csv(pocisti_podatke(seznam_slovarjev), polja, 'obdelani-podatki/podatki.csv')
 
 
 
