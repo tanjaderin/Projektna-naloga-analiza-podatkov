@@ -1,5 +1,6 @@
 Youtuberji
 ===
+V datoteki Ogrodje so pripomočki, s katerimi sem v glavni datodeki Projektna pobrala stran, izluščila ter očistila podatke in zapisala zbrano gradivo v tabelo. V mapi obdelani-podatki je tabela podatkov in datoteka z analizo teh.
 
 Pri projektni nalogi bom analizirala prvih 5000 najpopularnejših YouTube kanalov, podatke bom vzela na strani :
 https://socialblade.com/youtube/top/5000
