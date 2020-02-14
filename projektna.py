@@ -48,7 +48,7 @@ def pocisti_podatke(seznam):
         for i in ["st", "nd", "th", "rd"]:
             slovar["mesto"] = slovar["mesto"].replace(i,'')
         slovar["mesto"] = int(slovar["mesto"].replace(',', ''))
-        slovar["ocena"] = slovar["ocena"]
+        slovar["ocena"] = str(slovar["ocena"])
         slovar["ime"] = slovar["ime"]
         slovar["kategorija"] = slovar["kategorija"]
         slovar["objave"] = int(slovar["objave"].replace(',', ''))
